@@ -17,7 +17,7 @@ jobs:
     steps:
       # Step A: Download my code onto the server
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Step B: Run a simple Linux command
       - name: Greet the DevOps Engineer
