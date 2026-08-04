@@ -26,3 +26,7 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push diphamal/my-github-action-app:1.0.0
+
+      - name: run container
+        run: |
+          docker run -d -p 8080:80 diphamal/my-github-action-app:1.0.0
