@@ -1,0 +1,32 @@
+# 1. Name of the workflow (Shows up in the GitHub UI)
+name: My First CI Pipeline
+
+# 2. Event: When should this run?
+on:
+  push:
+    branches:
+      - main  # Runs every time you push to the 'main' branch
+
+# 3. Jobs: What do you want to do?
+jobs:
+  say-hello-job:
+    # 4. Runner: Give me a fresh Ubuntu Linux server!
+    runs-on: ubuntu-latest
+
+    # 5. Steps: The commands to execute on that server
+    steps:
+      # Step A: Download my code onto the server
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step B: Run a simple Linux command
+      - name: Greet the DevOps Engineer
+        run: echo "Hello Dibyashwor! Welcome to GitHub Actions!"
+
+      # Step C: Prove that we are on a real Linux server
+      - name: Check server details
+        run: |
+          echo "This server has the following OS:"
+          cat /etc/os-release
+          echo "And Docker is already installed! Look:"
+          docker --version
