@@ -29,4 +29,4 @@ jobs:
 
       - name: run container
         run: |
-          docker run -d -p 8080:80 diphamal/my-github-action-app:1.0.0
+          docker run -d --name my-github-action-container -p 8080:80 diphamal/my-github-action-app:1.0.0
