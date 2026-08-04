@@ -12,3 +12,7 @@ To understand GitHub Actions, you just need to know these 5 terms:
 3. **Runner (The Server)**: This is the machine that runs your code. Instead of setting up a server, you just type ubuntu-latest, and GitHub instantly spins up a fresh Ubuntu Linux machine for you.
 4. **Job**: A Workflow is made up of Jobs. For example, you might have one Job called build-java-app and another Job called build-docker-image. By default, Jobs run in parallel (at the same time).
 5. **Step**: Inside a Job, you have Steps. These are the actual commands, like mvn clean install or docker build.
+
+## Why is this so powerful for you?
+In Jenkins, if you wanted to run docker build, you had to manually install Docker on your Jenkins worker node.
+In GitHub Actions, the ubuntu-latest runner comes with Docker, Java, Maven, Python, and Node.js already installed.
